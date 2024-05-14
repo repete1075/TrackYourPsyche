@@ -1,0 +1,298 @@
+/*Colors Hex:
+Green: $6c7355
+Text Whiteish: #c7cdc8
+Menu Bar and content background: #9a9f8a
+Blue: #334467
+Text: #575a54
+Button: 808e8a
+*/
+body, header, nav, main, footer, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color:#334467;
+}
+
+/*header styles*/
+header {
+    top:0;
+    padding:0.7em 1em;
+    color:#c7cdc8;
+    background-color:#6c7355;
+    text-align:center;
+    font-size:3em;
+}
+#page-container{
+    position:relative;
+    min-height:100vh;
+}
+#content-wrap{
+    padding-bottom:2.5rem;
+}
+#footer{
+    position:absolute;
+    padding:0em 0em;
+    bottom:0;
+    width:100%;
+    height:2.5rem;
+}
+footer {
+    padding:0.7em 1em;
+
+    color:#c7cdc8;
+    background-color:#6c7355;
+    text-align: center;
+    font-size:1em;
+}
+footer a{
+    color:#c7cdc8;
+}
+nav{
+    padding:.1em;
+    background-color: #9a9f8a;
+    color:#c7cdc8;
+    margin-bottom:1%;
+    text-align:center;
+}
+nav ul{
+    list-style-type:none;
+
+}
+nav li{
+    display:inline-block;
+}
+nav li:last-child{
+    padding-left:8em;
+}
+nav li a{
+    display: inline-block;
+    padding:0.5em 1em;
+    color:#c7cdc8;
+    text-decoration:none;
+}
+nav a:hover{
+    background-color:#6c7355;
+}
+
+body #mainmenu{
+    display:inline-block;
+}
+
+/*Main page*/
+main #welcomemessage {
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    margin:2em;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:32% 32% 32%;
+    grid-column-gap:16px;
+    margin:2em;
+}
+main a {
+    text-decoration:none;
+    color:#575a54;
+}
+main a:hover{
+    background-color:#6c7355;
+}
+main #tracker{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+main #adder{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+main #analyzer{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+/*instruction page*/
+.error3{
+    background:#9a9f8a;
+    color:#c7cdc8;
+    border-radius:10px;
+}
+
+main #instructing{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+/*login style*/
+main #login{
+    background-color:#c7cdc8;
+    color:#575a54;
+    display:inline-block;
+    border-radius:10px;
+    padding: 0.5em 1em;
+    text-align:center;
+    line-height:3;
+}
+main #createaccount{
+    background-color:#c7cdc8;
+    color:#575a54;
+    display:inline-block;
+    border-radius:10px;
+    padding: 0.5em 1em;
+    text-align:center;
+    line-height:3;
+}
+
+label{
+    font-size:20px;
+}
+input{
+    width:50%;
+    padding:8px;
+    border-radius:5px;
+}
+
+button{
+    width:60px;
+    background:#9a9f8a;
+    color:#c7cdc8;
+    border:none;
+    border-radius:10px;
+}
+button:hover{
+    background-color:#6c7355;
+}
+#buttonquest{
+    border-radius:50%;
+    width:20px;
+}
+.grid2{
+    display:grid;
+    grid-template-columns:49% 49%;
+    grid-column-gap:16px;
+    margin:2em;
+}
+.error{
+    background:#9a9f8a;
+    color: #c7cdc8;
+    border-radius:10px;
+}
+.error2{
+    background:#9a9f8a;
+    color: #c7cdc8;
+    border-radius:10px;
+}
+.error3{
+    background:#9a9f8a;
+    color: #c7cdc8;
+    border-radius:10px;
+}
+.error4{
+    background:#9a9f8a;
+    color: #c7cdc8;
+    border-radius:10px;
+}
+.error5{
+    background:#9a9f8a;
+    color: #c7cdc8;
+    border-radius:10px;
+}
+.usersname{
+    color:#575a54;
+    display:inline;
+}
+.grid3{
+    display:grid;
+    grid-template-columns:80%;
+    grid-column-gap:16px;
+    margin:2em;
+}
+
+
+
+/*track page*/
+main #track{
+    background-color:#c7cdc8;
+    color:#575a54;
+    display:inline-block;
+    border-radius:10px;
+    padding: 0.5em 1em;
+    text-align:center;
+    line-height:1;
+}
+select{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+main #deleteinfo{
+    background-color:#c7cdc8;
+    color:#575a54;
+    display:inline-block;
+    border-radius:10px;
+    padding: 0.5em 1em;
+    text-align:center;
+    line-height:2;
+}
+.dategrid{
+    display:grid;
+}
+#date{
+    display:inline-block;
+}
+#checkDate{
+    width:20%;
+    display:inline-block;
+}
+
+.trackform{
+    padding:0.5em 1em;
+    display:grid;
+    grid-template-columns:49% 49%;
+    grid-column-gap:16px;
+    text-align:left;
+
+}
+
+
+
+
+/*add page*/
+main #adding{
+    background-color:#c7cdc8;
+    color:#575a54;
+    display:inline-block;
+    border-radius:10px;
+    padding: 0.5em 1em;
+    text-align:center;
+    line-height:3;
+}
+
+/*analyze page*/
+#chart_div{
+    padding:2em;
+}
+

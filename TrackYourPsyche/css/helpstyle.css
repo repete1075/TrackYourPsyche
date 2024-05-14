@@ -1,0 +1,171 @@
+body, header, nav, main, footer, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color:#334467;
+}
+
+/*header styles*/
+header {
+    top:0;
+    padding:0.7em 1em;
+    color:#c7cdc8;
+    background-color:#6c7355;
+    text-align:center;
+    font-size:3em;
+}
+#page-container{
+    position:relative;
+    min-height:100vh;
+}
+#content-wrap{
+    padding-bottom:2.5rem;
+}
+
+#footer{
+    position:absolute;
+    padding:0em 0em;
+    bottom:0;
+    width:100%;
+    height:2.5rem;
+}
+footer {
+    padding:0.7em 1em;
+
+    color:#c7cdc8;
+    background-color:#6c7355;
+    text-align: center;
+    font-size:1em;
+}
+footer a{
+    color:#c7cdc8;
+}
+nav{
+    padding:.1em;
+    background-color: #9a9f8a;
+    color:#c7cdc8;
+    margin-bottom:1%;
+    text-align:center;
+}
+nav ul{
+    list-style-type:none;
+
+}
+nav li{
+    display:inline-block;
+}
+
+nav li:last-child{
+    padding-left:8em;
+}
+nav li a{
+    display: inline-block;
+    padding:0.5em 1em;
+    color:#c7cdc8;
+    text-decoration:none;
+}
+nav a:hover{
+    background-color:#6c7355;
+}
+
+body #mainmenu{
+    display:inline-block;
+}
+
+/*Helpcenter*/
+#pagetitle{
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    margin:2em;
+}
+.grid3{
+    display:grid;
+    grid-template-columns:48% 48%;
+    grid-column-gap:16px;
+    margin:2em;
+}
+main a {
+    text-decoration:none;
+    color:#575a54;
+}
+
+main #userGuide{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+
+    
+}
+main #blog{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+
+ 
+}
+
+
+
+
+/*userguide*/
+h2 {
+    text-align:center;
+}
+
+#instructions {
+    background-color:#c7cdc8;
+    color:#575a54;
+    border-radius:10px;
+    width:80%;
+    margin-left:5%;
+    padding:1em 2em;
+}
+img {
+    height:300px;
+    margin:auto;
+    display:block;
+}
+h4 {
+    margin:1em;
+}
+p {
+    margin:2em;
+}
+.grid2{
+    display:grid;
+    grid-template-columns:48% 48%;
+    grid-column-gap:16px;
+    margin:2em;
+}
+#databasebutton{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+
+}
+#databasetext{
+    display:inline-block;
+    background-color:#c7cdc8;
+    color:#575a54;
+    text-align:center;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+
+}
+
+

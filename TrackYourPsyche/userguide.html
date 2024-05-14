@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Track Your Psyche</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/helpstyle.css">
+        <script src="scripts/myscripts.js"></script>
+    </head>
+
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header>Track Your Psyche Help Center</header>
+
+                <nav>
+                    <ul>
+                        <li><a href="main.html">Track Your Psyche</a></li>
+                        <li><a href="helppage.html">Help Center Home</a></li>
+                        <li><a href="userguide.html">User Guide</a></li>
+                        <li><a href="https://trackyourpsyche.blogspot.com" target="_blank">Blog</a></li>
+                    </ul>
+                </nav>
+            
+                    
+                        
+                        <div id="instructions">
+                            <h2>Track Your Psyche Help Center User Guide</h2>
+                            <h4>About</h4>
+                            <p>Hello and welcome to Track My Psyche help center. Track My Psyche is currently based on local servers, so there is user set up required in order to utilize it. Follow the instructions below to set it up or help troubleshoot any issues. For any issues not listed, please submit a help request </p>
+                            
+                            <h3>Getting Started</h3>
+                            <h4>XAMPP</h4>
+                            <p>Download <a href="https://www.apachefriends.org">Xampp</a>. Choose the download that fits your operating system</p>
+                            <img src="images/xamppdownload.png" alt="Xampp download page">
+                            <img src="images/xampphome.png" alt="Xampp home">
+
+                            <h4>Create Initial Databases</h4>
+                            <p>Start servers by clicking "Manage Servers" then "Start All" or just start the MySQL Database server.</p>
+                            <img src="images/xamppservers.png" alt="Xampp servers">
+                            <p>Click "Welcome" on Xampp, then "Open Application Folder." Drag the folder fp2 to the folder htdocs.</p>
+                            <img src="images/htdocs.png" alt="htdocs">
+                            
+                            <p>To create the database, either click the button below or follow the instructions.</p>
+                            <div class="grid2">
+                                <div id="databasebutton">
+                                    <form class="adddatabase" action="adddatabase.php" method="post">
+                                        <input class="submit" type="submit" value="Create Database"/>
+                                    </form>
+                                </div>
+                                <div id="database text">
+                                    <p>Navigate to localhost/phpmyadmin on your browser</p>
+                                <img src="images/phpmyadmin.png" alt="phpmyadmin">
+                                    <p>Navigate to SQL in the menu bar on top of the page and input the following code:</p>
+                                    <p>CREATE DATABASE Track_My_Psyche;<br>
+
+                                        CREATE TABLE User_Profile ( <br>
+                                        userID INT(5) NOT NULL AUTO_INCREMENT, <br>
+                                        fname varchar(20) NOT NULL, <br>
+                                        username varchar(30) NOT NULL,<br>
+                                        email varchar(30) NOT NULL,<br>
+                                        password varchar(20) NOT NULL,<br>
+                                        PRIMARY KEY (userID)<br>
+                                        );<br>
+                                        USE Track_My_Psyche;
+                                        <br>
+                                        CREATE TABLE Conditions (<br>
+                                        ConditionID INT(10) NOT NULL AUTO_INCREMENT,<br>
+                                        ConditionName varchar(30) NOT NULL,<br>
+                                        PRIMARY KEY (ConditionID)<br>
+                                        );<br>
+                                        <br>
+                                        CREATE TABLE User_Conditions (<br>
+                                        UCID int(10) NOT NULL AUTO_INCREMENT,<br>
+                                        userID int(10) NOT NULL,<br>
+                                        ConditionID int(10) NOT NULL,<br>
+                                        PRIMARY KEY (UCID),<br>
+                                        CONSTRAINT FK_USER FOREIGN KEY (userID)<br>
+                                        REFERENCES User_Profile(userID),<br>
+                                        CONSTRAINT FK_COND FOREIGN KEY (ConditionID)<br>
+                                        REFERENCES Conditions(ConditionID)<br>
+                                        );<br>
+                                        <br>
+                                        CREATE TABLE User_Condition_Rating (<br>
+                                        UCRID int(10) NOT NULL AUTO_INCREMENT,<br>
+                                        userID int(10) NOT NULL,<br>
+                                        condID int(10) NOT NULL,<br>
+                                        rating int(10) NOT NULL,<br>
+                                        theDate date NOT NULL,<br>
+                                        PRIMARY KEY (UCRID),<br>
+                                        CONSTRAINT FK_USERID FOREIGN KEY (userID)<br>
+                                        REFERENCES User_Profile(userID),<br>
+                                        CONSTRAINT FK_CONDITION FOREIGN KEY (condID)<br>
+                                        REFERENCES Conditions(ConditionID)<br>
+                                        );<br>
+                                        INSERT INTO Conditions (ConditionName) <br>
+                                        VALUES ('Happy'), ('Angry'), ('Sad'), ('Anxious'), ('Sleep');
+                                        <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            <img src="images/sql.png">
+
+                            <h4>Create Account</h4>
+                            <p>Navigate to Track Your Psyche and select New Account. Enter your details to create your account. Password must be at least 8 characters, include at least one uppercase and one lowercase letter as well as at least one number. Once your account has successfully been created, login.</p>
+                           <img src="images/login.png">
+
+                            <h3>Features</h3>
+                            <p>Track Your Psyche can be used to track your moods, pain, or anything else you would like to track that can be rated on a scale from 0 to 5. It will also provide a graph so you can monitor the changes in your mood. To learn more about each function keep reading.</p>
+                            
+                            <h4>Track Moods</h4>
+                            <p>Here you can track your moods or your custom categories. To input data, either type in the date (in format YYYY/MM/DD) or check the box for today’s date, then rate your moods and click submit.</p>    
+                            <img src="images/tracking.png">
+
+                            <h4>Add Categories</h4>
+                            <p>Add your own custom category to track. Type the name of the category you would like to track and click submit. Your category will now be added and will show up one the track form.</p>
+                            <img src="images/adding.png">
+
+                            <h4>Analyze Data</h4>
+                            <p>On this page you can view a line graph of all the data you have added.</p>
+                            <img src="images/analysis.png">
+
+                            
+                        </div>
+                           
+                        
+            
+            <footer id="footer">
+                
+            </footer>
+        </div>
+    </body>
+</html>
